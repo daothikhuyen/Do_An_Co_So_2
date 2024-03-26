@@ -1,0 +1,91 @@
+include '../../db/connection.php';
+    include '../../model/base.php';
+    include '../../model/category_mode.php';
+    include '../../model/shop_mode.php';
+
+$shop = new Shop();
+    $category = new Category();
+
+    $query_category = $category->select_all_category();
+
+    function renderAll($shop,$item_per_page,$offset){
+        $sql_all = "SELECT * FROM product ORDER BY RAND() ASC LIMIT ". $item_per_page." OFFSET ". $offset;
+        $request_select = $shop->select_request($sql_all);
+        return $request_select;
+    }
+
+    function select_price($conn, $price){
+            $sql_all = "SELECT * FROM product WHERE price <= $price  LIMIT 9 OFFSET 0";
+            $request_select = mysqli_query($conn,$sql_all);
+            return $request_select;
+        }
+
+    
+    
+// Phân trang
+        $item_per_page = !empty($_GET['per_page'])?$_GET['per_page'] :12;// giới hạn sản phẩm
+
+        $current_page = !empty($_GET['page'])?$_GET['page']:1;// số sản phẩm trong 1 page
+    
+        $offset = ($current_page -1) * $item_per_page;
+    
+        // SQL renderAll tăng dần
+        $shop_all = renderAll($shop,$item_per_page,$offset);
+    
+        $request_query = $shop->select_all_product();
+        $totalRecords = mysqli_num_rows($request_query);
+    
+        $totalPages = ceil($totalRecords/ $item_per_page);
+// end
+
+    if(!empty($_GET['select'] )){
+
+        switch($_GET['select']){
+            case "allproduct":
+                $shop_all = renderAll($shop,9,0);
+                break;
+            case "ASC":
+                $shop_all = $shop->select_limit_end_produdct('product','price','ASC',9,0);
+                break;
+            case "DESC":
+                $shop_all = $shop->select_limit_end_produdct('product','price','DESC',9,0);
+                break;
+            // case "SEARCH":
+            //     $key = $_POST['searchSP'];
+            //     // echo $key;
+            //     // exit;
+            //     $sql_search = "SELECT * FROM product WHERE title like '%$key%' LIMIT 9 OFFSET 0 ";
+            //     $shop_all = mysqli_query($conn,$sql_search);
+            //     break;
+
+        } 
+    }
+
+    <div class="menu_order_page under_menu">
+                                        <a href="order.php?session=Account_Info" type="submit" name="btn_account" class="btn_order_page">Account Info</a>
+                                    </div>
+                                    <div class="menu_order_page ">
+                                        <a type="submit" name="btn_being_delivered" class="btn_order_page ">Orders are being delivered</a>
+                                    </div>
+                                    <div class="menu_order_page">
+                                        <a type="submit" name="btn_has_delivered" class="btn_order_page ">Order Delivered</a>
+                                    </div>
+                                    <div class="menu_order_page ">
+                                        <a type="submit" name="btn_canceled" class="btn_order_page">Canceled Order</a>
+                                    </div>
+
+
+                                    // $.ajax({
+                //     type : 'post',
+                //     url : '../../controler/order_controller.php?order_detail',
+                //     data: $($vitri).serializeArray()
+                // })
+                // .done(function(data){
+                //     alert(data);
+                //     order_index_info_product[index].remove()
+                    
+                //     alert("Đặt Hàng Thanh Công");
+                // })
+                // .fail(function(data){
+                //     alert("Đặt hàng thất bại");
+                // })

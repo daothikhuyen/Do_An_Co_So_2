@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Fira+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Uchen&family=Ysabeau:wght@200;300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Uchen', serif;
+    font-family: 'Ysabeau', sans-serif;
+    list-style: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+
+
+:root{
+    --main-color:#fda702;
+    --second-color:#ebeff2;
+    --text-color:#f9e9e9;
+    --bg-color: #b15050;
+
+    /* Box shawdow */
+    --box-shodow: 2px 2px 10px 4px rgb(14 55 54 / 15%);
+
+
+}
+
+html::-webkit-scrollbar{
+    width: 0.5rem;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-track{
+    background: var(--text-color);
+    border-radius:5rem ;
+}
+
+footer{
+    background: var(--text-color);
+}
+
+.footer_row{
+    padding: 40px 50px 0;
+}
+
+h5{
+    color: var(--bg-color);
+    font-weight: bolder;
+    text-align: start;
+}
+
+.footer_ul{
+    color: #b15050;
+    text-align: start;
+}
+
+input[type='text']:focus {
+    outline: none;
+ }
+
+.buttom{
+    color: #b15050;
+    font-weight: 800;
+    background: #eebebe;
+}
+
+.logo_row .image{
+    text-align: center;
+    /* width: 150px;
+    height: 150px; */
+}
+
+.logo_row .image img{
+    width: 150px;
+    height: 150px;
+  
+}
+
+.logo_row p{
+    text-align: center;
+    color: #b15050;
+    background: var(--text-color);
+    width: 100%;
+}
+
+.row_icon{
+    text-align: center;
+    color: #b15050;
+    display: flex;
+}
+
+.row_icon p{
+    border: 1px solid #f3d1d1;
+    background-color: #eebebe;
+    margin: 10px;
+    margin-left: 0;
+    padding: 10px;
+    transition: 0.2s ease;
+    
+}
+
+.row_icon p:hover{
+    background-color: #b15050;
+    color: #fff;
+}
+
+
+
+@media (min-width: 768px){
+    .logo_row .image{
+        min-width: 40%;
+    }
+}
+

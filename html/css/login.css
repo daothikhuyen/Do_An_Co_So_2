@@ -1,0 +1,220 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Fira+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Ysabeau:wght@200;300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Fira+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Ysabeau:wght@200;300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Ysabeau', sans-serif;
+    list-style: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    
+}
+
+
+.login{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("../../image/banner/admin_register.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.form_login{
+    display: inline-block;
+    width: 400px;
+    /* border: 1px solid #a97575; */
+    /* background-color: #ffd9de; */
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 10px;
+}
+
+.form h2{
+    text-align: center;
+    color: #a97575;
+    font-weight: 800;
+    margin-top: 20px;
+}
+
+.form h6{
+    color: #a97575;
+}
+
+.form_control{
+    position: relative;
+    width: 350px;
+    margin: 35px 12px;
+    color: #a97575;
+}
+
+.form_control input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    padding-left: 10px;
+    background-color: transparent;
+    border-bottom: 2px solid rgb(211, 156, 73,0.2);
+    
+}
+
+.form_control span::before{
+    content: '';
+    height: 2px;
+    background-color: #d39c49;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    width: 0%;
+    transition: 0.3s;
+}
+
+.form_control input:focus ~ span::before{
+    width: 100%;
+}
+
+.form_control small {
+    width: 100%;
+    height: 2px;
+    font-size: 16px;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    color: rgb(255, 0, 0);
+    transition: 0.3s;
+    margin-top: 5px;
+    padding-left: 15px;
+}
+
+.Error_check{
+    width: 100%;
+    height: 2px;
+    color: rgb(255, 0, 0);
+    transition: 0.3s;
+    margin-top: 5px;
+    margin-bottom: 35px;
+    padding-left: 15px;
+
+}
+
+form .tick{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #a97575;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.content,
+form .tick .forgot_Pass a{
+    text-decoration: none;
+    color: #a97575;
+}
+
+form .tick .forgot_Pass:hover a{
+    text-decoration: underline;
+    transition: all .3s ease;
+    font-weight: bolder;
+}
+
+.content a{
+    font-weight: 800;
+    color: #a97575;
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+}
+
+a:hover{
+    color: #af5e5e;
+    text-decoration: underline;
+}
+
+form .social span{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #a97575;
+    border-radius: 5px;
+    margin: 0 10px;
+    color: #d39c49;
+    transition: all 0.2s ease-in;
+}
+
+form .social span:hover{
+    background-color: #a97575;
+    color: #fff;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+}
+
+.button button{
+    border: none;
+    background-color: #a97575;
+    padding: 5px 50px;
+    font-size: 20px;
+    font-weight: 800;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.button button:hover{
+    background-color: #d0a4a4;
+    
+}
+
+.Error_notifi{
+    width: 100%;
+    background-color:#f2d1cf;
+    color: brown;
+    font-size: 16px;
+    font-weight: bolder;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.change_user_admin{
+    display: flex;
+    justify-content: space-around;
+}
+
+.change_user_admin img{
+    cursor: auto;
+}
+
+.change_user_admin h6{
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: all .2s ease;
+}
+
+.change_user_admin h6:hover{
+    box-shadow: 0 0px 5px #d39c49;
+}
+
+.modal-footer:hover .btn-send{
+    background-color: #773939;
+}

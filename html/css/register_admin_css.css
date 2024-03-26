@@ -1,0 +1,149 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Fira+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Ysabeau:wght@200;300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Ysabeau', sans-serif;
+    list-style: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    
+}
+
+.form_admin{
+    width: 100%;
+    min-height: 100vh;
+    background: url("../../image/banner/banner_01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.form_register_admin{
+    display: inline-block;
+    background-color: #fff;
+    padding: 15px 25px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    float: right;
+}
+
+.form_register_admin h4{
+    color: #a97575;
+    text-align: center;
+    font-style: 20px;
+    font-weight: 700;
+}
+
+.form_register_admin h6{
+    color: hsl(24,53%,38%);
+    font-weight: 700;
+    padding-left: 5px;
+    border-left: 3px solid hsl(24,53%,38%);
+}
+
+.form_01 {
+    padding-right:15px ;
+    
+}
+
+.form_02{
+    padding-left: 15px;
+}
+
+.form_02 button{
+    background-color: #844747;
+    color: #fff;
+    border: none;
+    padding: 5px 20px;
+    font-weight: 700;
+    border-radius: 8px;
+    float: right;
+}
+
+.form_02 button:hover{
+    background-color: rgb(96, 57, 57);
+}
+
+.form_control{
+    position: relative;
+    width: 350px;
+    margin: 35px 0;
+    color: #a97575;
+}
+
+.form_control input{
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    outline: none;
+    padding-left: 10px;
+    border: 1px solid #bb9f9f;
+    border-radius: 8px;
+    color: #8b5757;
+    background-color: transparent;
+    
+}
+
+.form_control .bank{
+    outline: none;
+    width: 100%;
+    height: 40px;
+    padding: 5px 10px;
+    border: 1px solid #bb9f9f;
+    border-radius: 8px;
+    color: #8b5757;
+    font-weight: 700;
+}
+
+.form_control input:focus{
+    background-color: transparent;
+}
+
+
+.form_control input:focus ~ span::before{
+    width: 100%;
+}
+
+.form_control small {
+    width: 100%;
+    height: 2px;
+    font-size: 16px;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    color: rgb(255, 0, 0);
+    transition: 0.3s;
+    margin-top: 5px;
+    padding-left: 15px;
+}
+
+.Error_check{
+    width: 100%;
+    height: 2px;
+    color: rgb(255, 0, 0);
+    transition: 0.3s;
+    margin-top: 5px;
+    margin-bottom: 35px;
+    padding-left: 15px;
+
+}
+
+.Error_notifi {
+    background-color: rgb(189, 61, 61);
+    padding: 5px 10px;
+    font-weight: 700;
+    border-radius: 6px;
+    margin-left: 5px;
+    transition: all .3s ease;
+}

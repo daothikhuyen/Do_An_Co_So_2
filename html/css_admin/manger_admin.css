@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Fira+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Ysabeau:wght@200;300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Ysabeau', sans-serif;
+    list-style: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+
+.title_card{
+    color: #ad7959;
+    font-weight: 700;
+    border-left: 3px solid #ad7959;
+    padding-left:5px;
+}
+
+.card .cus-info .info{
+    margin-left:50px ;
+    padding: 8px 0;
+}
+
+.card .cus-info .info label{
+    width: 140px;
+}
+
+.card .cus-info .info input{
+    border: none;
+    outline: none;
+}
+
+.accept_or_cancel{
+    display: flex;
+    justify-content: end;
+}
+
+.accept_or_cancel .accept a{
+    background-color: #b15050;
+    padding: 5px 10px;
+    color: #fff;
+    margin-right: 20px;
+    border-radius: 5px;
+}
